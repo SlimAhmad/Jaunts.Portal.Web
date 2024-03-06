@@ -1,0 +1,10 @@
+﻿@using Syncfusion.Blazor.Buttons
+
+
+<SfButton OnClick=@Click
+		  Disabled=@IsDisabled
+		  IsPrimary=@true 
+		  CssClass="@CssClass"
+		  @bind-Visible=@IsVisible>
+		  <span class="font-semibold text-white text-lg"> @Label</span>
+</SfButton>

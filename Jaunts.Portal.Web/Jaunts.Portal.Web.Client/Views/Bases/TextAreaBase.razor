@@ -1,0 +1,11 @@
+﻿@using Syncfusion.Blazor.Inputs
+@rendermode InteractiveAuto
+
+<SfTextBox @bind-Value=@Value
+           @oninput=@OnValueChanged
+           Placeholder=@Placeholder
+           Enabled=@IsEnabled
+           Multiline=true
+           FloatLabelType=@FloatLabelType.Auto
+           InputAttributes="@(new() { { "style", $"height:{@Height}" } })"
+           />

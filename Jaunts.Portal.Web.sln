@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34526.213
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jaunts.Portal.Web", "Jaunts.Portal.Web\Jaunts.Portal.Web\Jaunts.Portal.Web.csproj", "{F49F320B-8738-4CF8-96CC-9A0092FF6523}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jaunts.Portal.Web.Client", "Jaunts.Portal.Web\Jaunts.Portal.Web.Client\Jaunts.Portal.Web.Client.csproj", "{62CB867D-6E2E-4F59-AE8C-B09FBF14482A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F49F320B-8738-4CF8-96CC-9A0092FF6523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49F320B-8738-4CF8-96CC-9A0092FF6523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49F320B-8738-4CF8-96CC-9A0092FF6523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49F320B-8738-4CF8-96CC-9A0092FF6523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62CB867D-6E2E-4F59-AE8C-B09FBF14482A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62CB867D-6E2E-4F59-AE8C-B09FBF14482A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62CB867D-6E2E-4F59-AE8C-B09FBF14482A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62CB867D-6E2E-4F59-AE8C-B09FBF14482A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22734242-DF3D-4BF6-8566-C0366823623A}
+	EndGlobalSection
+EndGlobal

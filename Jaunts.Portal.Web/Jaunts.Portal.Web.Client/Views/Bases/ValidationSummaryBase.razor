@@ -1,0 +1,14 @@
+﻿@using PrettyBlazor
+@rendermode InteractiveAuto
+
+<label style="color:@Color">@Message</label>
+
+<Condition Evaluation=@(Errors is not null)>
+    <Match>
+        <ul>
+            <Iterations Items=Errors Context=Error>
+                <li style="color:@Color">@Error</li>
+            </Iterations>
+        </ul>
+    </Match>
+</Condition>

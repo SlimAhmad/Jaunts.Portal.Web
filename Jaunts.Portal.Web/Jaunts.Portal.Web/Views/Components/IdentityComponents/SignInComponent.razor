@@ -1,0 +1,35 @@
+﻿<div class="py-6">
+    <div>
+        <TextBoxBase 
+            @ref=@SignInEmailTextBox
+			@bind-Value=@SignInView.UsernameOrEmail
+            Placeholder="Your email ?"
+            CssClass="w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none" />
+    </div>
+
+    <div class="flex flex-col items-end">
+        <TextBoxBase
+            @ref=@SignInPasswordTextBox
+            @bind-Value=@SignInView.Password
+            Placeholder="What's the secret word ?"
+            CssClass="w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none" />
+        <a href="/forgotten/password" type="reset" class="w-max p-3 -mr-3">
+            <span class="text-sm tracking-wide text-blue-600">Forgot password ?</span>
+        </a>
+    </div>
+
+    <div>
+        <ButtonBase 
+            @ref=@SubmitButton 
+            OnClick=@SignInAsync 
+            Label="Login"
+            CssClass="w-full px-6 py-3 rounded-xl bg-sky-500 transition hover:bg-sky-600 focus:bg-sky-600 active:bg-sky-800" />
+        <SpinnerBase @ref=@Spinner />
+        <a href="/signup" type="reset" class="w-max p-3 -ml-3">
+            <span class="text-sm tracking-wide text-blue-600">Create new account</span>
+        </a>
+
+    </div>
+  
+
+</div>

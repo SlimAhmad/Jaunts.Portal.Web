@@ -1,0 +1,59 @@
+﻿@using Jaunts.Portal.Web.Client.Models.RideViews
+@using Jaunts.Portal.Web.Client.Models.Rides
+@using Jaunts.Portal.Web.Client.Models.Views.Components.RidesComponents
+@using Jaunts.Portal.Web.Client.Views.Bases
+@using PrettyBlazor
+@rendermode InteractiveAuto
+@using Syncfusion.Blazor.Grids
+
+
+<Condition Evaluation=@(State == RidesComponentState.Content)>
+    <Match>
+        <GridBase @ref=Grid DataSource=RideViews>
+            <Columns>
+                <GridColumns>
+                    <GridColumn Type='Syncfusion.Blazor.Grids.ColumnType.CheckBox' Width="50"></GridColumn>
+                    <GridColumn Field=@nameof(Ride.Id) HeaderText="Ride ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true })" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Left" Width="120"></GridColumn>
+                    <GridColumn HeaderText="Status" TextAlign="TextAlign.Center" Width="120">
+                        <Template>
+                            @{
+                                var ride = (context as RideView);
+                                <div class="m-3 p-3 bg-green-400 rounded text-white">
+                                   @ride.RideStatus
+                                </div>
+                            }
+                          
+                        </Template>
+                    </GridColumn>
+                    <GridColumn Field=@nameof(Ride.CreatedDate) HeaderText="Created Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
+                    <GridColumn Field=@nameof(Ride.Discount) HeaderText="Discount" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+                    <GridColumn Field=@nameof(Ride.Location) HeaderText="Location" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+                    <GridColumn HeaderText="Actions" TextAlign="TextAlign.Center" Width="120">
+                        <Template>
+                            @{
+                                var ride = (context as RideView);
+                                <div class="flex gap-0">
+                                    <div class="m-3 p-3 bg-green-400 rounded text-white">
+                                        Edit
+                                    </div>
+                                    <div class="m-3 p-3 bg-blue-400 rounded text-white">
+                                        Delete
+                                    </div>
+
+                                </div>
+                              
+                            }
+
+                        </Template>
+                    </GridColumn>
+                </GridColumns>
+            </Columns>
+        </GridBase>
+    </Match>
+</Condition>
+
+<Condition Evaluation=@(State == RidesComponentState.Error)>
+    <Match>
+        <LabelBase @ref=ErrorLabel Value=@ErrorMessage />
+    </Match>
+</Condition>

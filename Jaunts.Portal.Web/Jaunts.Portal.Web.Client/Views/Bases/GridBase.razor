@@ -1,0 +1,9 @@
+﻿@using Syncfusion.Blazor.Grids
+@typeparam T
+
+<SfGrid DataSource=DataSource TValue=T @ref="Grid"
+        AllowPaging="true" AllowFiltering="true" 
+        AllowExcelExport="true" AllowSelection="true">
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    @Columns
+</SfGrid>

@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
+    <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+    <PackageReference Include="PrettyBlazor" Version="1.2.0" />
+    <PackageReference Include="RESTFulSense.WebAssembly" Version="2.18.0" />
+        <PackageReference Include="Syncfusion.Blazor.Grid" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.Buttons" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.Cards" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.Spinner" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.DropDowns" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.Inputs" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.Calendars" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.Charts" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.CircularGauge" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.PdfViewerServer.Windows" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.PdfViewer" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.Popups" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.Navigations" Version="24.2.6" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="24.2.6" />
+    <PackageReference Include="Xeption" Version="2.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Wallets\" />
+    <Folder Include="Services\Foundations\Wallets\" />
+  </ItemGroup>
+
+</Project>

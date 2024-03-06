@@ -1,0 +1,50 @@
+﻿@using Jaunts.Portal.Web.Views.Components.ContainerComponents;
+@using Jaunts.Portal.Web.Client.Views.Bases;
+@using Jaunts.Portal.Web.Client.Models.RideViews;
+@using Jaunts.Portal.Web.Client.Models.Colors;
+
+
+<CardBase Title="Ride Registration"
+		  SubTitle="Please fill in the below fields">
+	<Content>
+		<ContainerComponent State=State>
+			<Content>
+				<div>
+			
+					<TextBoxBase @ref=@RideNameTextBox
+								 @bind-Value=@RideView.Name
+								 Placeholder="Name" />
+					<br />
+		             
+					<TextBoxBase @ref=@RideLocationTextBox
+								 @bind-Value=@RideView.Location
+								 Placeholder="Location" />
+					<br />
+
+					<TextBoxBase @ref=@RideDescriptionTextBox
+								 @bind-Value=@RideView.Description
+								 Placeholder="Description" />
+					<br />
+
+					<DropDownBase @ref=@RideStatusDropDown
+								  @bind-Value=@RideView.RideStatus
+								  TEnum="RideViewStatus" 
+								  PlaceHolder="Select Status"/>
+
+					<br />
+					<DatePickerBase @ref=@DatePicker
+									@bind-Value=@RideView.CreatedDate />
+
+					<LabelBase @ref=@StatusLabel />
+				</div>
+			</Content>
+		</ContainerComponent>
+	</Content>
+	<Footer>
+		<div align=right>
+			<ButtonBase @ref=@SubmitButton
+						Label="SUBMIT"
+						OnClick=@RegisterRideAsync />
+		</div>
+	</Footer>
+</CardBase>
